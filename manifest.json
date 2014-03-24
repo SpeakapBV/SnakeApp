@@ -1,0 +1,16 @@
+{
+    "name": {
+        "en-US": "Snake",
+        "nl-NL": "Slang"
+    },
+    "permissions": ["get_profile_status"],
+    "entries": [
+        {
+            "position": "main",
+            "devices": "desktop",
+            "url": "https://app.example.org/snake/snake.php",
+            "label": { "en-US": "Snake", "nl-NL": "Slang" },
+            "icon": "https://app.example.org/snake/snake/snake.jpg"
+        }
+    ]
+}

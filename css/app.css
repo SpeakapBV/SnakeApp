@@ -1,0 +1,89 @@
+div {
+    display: block;
+}
+
+div.profile {
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition-delay: 0s;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease;
+    background-clip: border-box;
+    background: rgb(255, 255, 255) none scroll;
+    background-origin: padding-box;
+    background-size: auto;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    height: 84px;
+    line-height: 18px;
+    margin: 0px 10px 10px 0px;
+    padding-left: 80px;
+    position: relative;
+    text-rendering: optimizelegibility;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease;
+    width: 700px;
+}
+
+div.profilePhoto {
+    -webkit-box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 25px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    height: 50px;
+    left: 15px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    text-rendering: optimizelegibility;
+    width: 50px;
+}
+
+div.profilePhoto img {
+    -webkit-font-smoothing: antialiased;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    height: 50px;
+    line-height: 18px;
+    max-height: 100%;
+    vertical-align: middle;
+    width: 50px;
+}
+
+div.profileText {
+    -webkit-font-smoothing: antialiased;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    height: 56px;
+    line-height: 18px;
+    padding-top: 15px;
+    text-rendering: optimizelegibility;
+    width: 305px;
+}
+
