@@ -1,3 +1,20 @@
+<?php
+
+require 'vendor/autoload.php';
+
+$speakapSignedRequest = new \Speakap\SDK\SignedRequest(
+    '000a000000000006',
+    'legless lizards'
+);
+
+if ( ! $speakapSignedRequest->isValid()) {
+    die(
+        "I'm sorry, but the request seems invalid. Please try again!" .
+        "Note that this application can only be started from within Speakap."
+    );
+}
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -8,16 +25,8 @@
             // The app identifier, note that this identifier is case-sensitive.
             appId: "000a000000000006",
 
-            // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            // This is an EXTREMELY BAD idea. This is only used to quickly experiment with the Speakap stack. When you
-            // do not validate the request server-side, your application is VULNERABLE to a myriad of attacks.
-            //
-            // See the correct implementations at:
-            // @see https://github.com/SpeakapBV/Speakap-SDK
-            //
-            signedRequest: "<?php echo file_get_contents('php://input'); ?>"
-            //
-            // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            // Sign our payload using our own secret and define it for the Speakap proxy.
+            signedRequest: "<?php echo $speakapSignedRequest; ?>"
         };
     </script>
 
