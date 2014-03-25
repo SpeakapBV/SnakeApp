@@ -6,6 +6,7 @@ $speakapSignedRequest = new \Speakap\SDK\SignedRequest(
     '000a000000000006',
     'legless lizards'
 );
+$speakapSignedRequest->setPayload(file_get_contents('php://input'));
 
 if ( ! $speakapSignedRequest->isValid()) {
     die(
