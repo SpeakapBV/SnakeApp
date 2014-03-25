@@ -1,0 +1,19 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/SpeakapBV/Speakap-SDK.git"
+        }
+    ],
+    "name": "mark/snake-app",
+    "description": "A Speakap example application. The game snake",
+    "authors": [
+        {
+            "name": "Mark van der Velden",
+            "email": "mark.velden@speakap.com"
+        }
+    ],
+    "require": {
+        "speakap/sdk" : "*@dev"
+    }
+}
