@@ -14,6 +14,6 @@
         }
     ],
     "require": {
-        "speakap/sdk" : "*@dev"
+        "speakap/sdk" : "dev-master"
     }
 }

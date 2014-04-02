@@ -6,9 +6,9 @@ $speakapSignedRequest = new \Speakap\SDK\SignedRequest(
     '000a000000000006',
     'legless lizards'
 );
-$speakapSignedRequest->setPayload(file_get_contents('php://input'));
 
-if ( ! $speakapSignedRequest->isValid()) {
+
+if ( ! $speakapSignedRequest->validateSignature($_POST)) {
     die(
         "I'm sorry, but the request seems invalid. Please try again!" .
         "Note that this application can only be started from within Speakap."
@@ -27,7 +27,7 @@ if ( ! $speakapSignedRequest->isValid()) {
             appId: "000a000000000006",
 
             // Sign our payload using our own secret and define it for the Speakap proxy.
-            signedRequest: "<?php echo $speakapSignedRequest; ?>"
+            signedRequest: "<?php echo $speakapSignedRequest->getSignedRequest($_POST); ?>"
         };
     </script>
 
