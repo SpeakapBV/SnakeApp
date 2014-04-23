@@ -3,8 +3,8 @@
 require 'vendor/autoload.php';
 
 $speakapSignedRequest = new \Speakap\SDK\SignedRequest(
-    '000a000000000006',
-    'legless lizards'
+    '000a000000000006', // The app identifier
+    'legless lizards'   // The secret, something you should never actually commit in any repository :-)
 );
 
 
@@ -55,7 +55,7 @@ if ( ! $speakapSignedRequest->validateSignature($_POST)) {
      * usual "dom ready" event. After the handshake is complete, all information you need will be available or is in
      * a state so that it can get the information.
      *
-     * @see
+     * @see http://developer.speakap.io/portal/tutorials/frontend_proxy.html#dohandshake
      */
 
     // Wait until we've completed our handshake
@@ -72,7 +72,8 @@ if ( ! $speakapSignedRequest->validateSignature($_POST)) {
                 $('div.profilePhoto').append('<img src="'+ user.avatarThumbnailUrl +'" alt="user avatar">');
             }
 
-            // Starting the game
+            // Starting the game, this is all documented here:
+            // @see https://github.com/patorjk/JavaScript-Snake
             new SNAKE.Board({
                 boardContainer: "snake-pit",
                 fullScreen: false,
