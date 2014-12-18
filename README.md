@@ -10,7 +10,7 @@ An explanation of the files:
 * snake.jpg - The image of a snake, this is shown in the menu on the left
 * snake.php - The content being loaded in an iframe in Speakap
 * js/speakap.js - The Speakap proxy, it's taken from the SDK: https://github.com/SpeakapBV/Speakap-SDK/blob/master/js/speakap.js
-* manifest.json - The "app" metadata, see: http://developer.speakap.io/portal/tutorials/manifest.html
+* manifest.json - The "app" metadata, see: http://developer.speakap.io/configuring-manifest-json/
 * composer.json - The library dependency metadata, for easy installation of the Speakap SDK via Composer (https://getcomposer.org/)
 
 All remaining files are part of the Snake game and are not required for communication with Speakap.
