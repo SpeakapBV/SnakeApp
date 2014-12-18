@@ -15,7 +15,7 @@ An explanation of the files:
 
 All remaining files are part of the Snake game and are not required for communication with Speakap.
 
-More documentation can be found at: http://developer.speakap.io/portal/
+More documentation can be found at: http://developer.speakap.io/
 
 
 Installation
